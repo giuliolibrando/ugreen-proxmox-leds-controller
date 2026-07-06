@@ -1,0 +1,8 @@
+[Unit]
+Description=UGREEN Storage LED Status Synchronization
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 5
+ExecStart=/usr/local/bin/ugreen_leds_sync.sh
